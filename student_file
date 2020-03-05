@@ -1,0 +1,26 @@
+class Student:
+    def __init__(self,name,roll_number):
+        self.name=name
+        self.roll_number=roll_number
+
+    def printname(self):
+        print(self.name,self.roll_number)
+
+class Student_child(Student):
+    def __init__(self,name,roll_number):
+        super().__init__(name,roll_number)
+
+    def setAge(self,age):
+        self.age=age
+
+    def setMarks(self,marks1):
+        self.marks1 = marks1                    #it is not necessary create multiple marks
+    
+    #to get display multiple details you can use the escape characters
+    def Display(self):
+        print("Our Student name %s is and roll number is %d " %(self.name ,self.roll_number),"and age is ",self.age,"With the marks ",self.marks1)
+
+obj = Student_child("John",76)         #you are suppose to pass only the number of arguments you have assigned.
+obj.setAge(20)                         # you need to pass the arguments here
+obj.setMarks(77)                        # you need to pass an argument here
+obj.Display()
