@@ -1,0 +1,26 @@
+class Student:
+    def __init__(self,name,roll_number):
+        self.name=name
+        self.roll_number=roll_number
+
+    def printname(self):
+        print(self.name,self.roll_number)
+
+class Student_child(Student):
+    def __init__(self,name,roll_number):
+        super().__init__(name,roll_number)
+
+    def setAge(self,age):
+        self.age=age
+
+    def setMarks(self,marks1):   #you are not supposed to create multiple marks arguments
+        self.marks1 = marks1
+
+    # use escape characters to insert integer and string into the print.
+    def Display(self):
+        print("Our Student name %s is and roll number is %d " %(self.name ,self.roll_number),"and age is ",self.age,"With the marks ",self.marks1)
+
+obj = Student_child("John",76)    # you are suppose to add only those many arguments as you have initilised at the begining of the function
+obj.setAge(20)                    #you are suppose to pass an argument here
+obj.setMarks(77)                  #you are suppose to pass an argument here
+obj.Display()
